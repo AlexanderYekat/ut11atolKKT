@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Button name="КомандаТест1" id="6">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.КомандаТест1</CommandName>
+			<ExtendedTooltip name="КомандаТест1РасширеннаяПодсказка" id="7"/>
+		</Button>
+		<Button name="КомандапечатьЧекаНаККТ" id="8">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.КомандапечатьЧекаНаККТ</CommandName>
+			<ExtendedTooltip name="КомандапечатьЧекаНаККТРасширеннаяПодсказка" id="9"/>
+		</Button>
+		<Button name="КомандаОткрытьФормуДокумента" id="10">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.КомандаОткрытьФормуДокумента</CommandName>
+			<ExtendedTooltip name="КомандаОткрытьФормуДокументаРасширеннаяПодсказка" id="11"/>
+		</Button>
+		<InputField name="РеквизитЭлДокумОплКарнтой" id="1">
+			<DataPath>РеквизитФормыДокумОплКарнтой</DataPath>
+			<ContextMenu name="РеквизитЭлДокумОплКарнтойКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="РеквизитЭлДокумОплКарнтойРасширеннаяПодсказка" id="3"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ВнешняяОбработкаТест</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РеквизитФормыДокумОплКарнтой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит формы докум опл карнтой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ОперацияПоПлатежнойКарте</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаТест1" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда тест1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда тест1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаТест1</Action>
+		</Command>
+		<Command name="КомандапечатьЧекаНаККТ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командапечать чека на ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командапечать чека на ККТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандапечатьЧекаНаККТ</Action>
+		</Command>
+		<Command name="КомандаОткрытьФормуДокумента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть форму документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть форму документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьФормуДокумента</Action>
+		</Command>
+	</Commands>
+</Form>

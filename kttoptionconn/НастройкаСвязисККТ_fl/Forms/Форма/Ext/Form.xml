@@ -1,0 +1,1984 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка связи с кассой Атол</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаВкладки" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вкладки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вкладки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаВкладкиРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="ГруппаВкладкаОснованя" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка связи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вкладка основаня</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВкладкаОснованяРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройки" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="20"/>
+							<ChildItems>
+								<InputField name="ПолеТипСвязи" id="7">
+									<DataPath>РеквизитТипСвязи</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способо связи с ККТ</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="ПолеТипСвязиКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ПолеТипСвязиРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="StartChoice">ПолеСпособСвзяиККТНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="полеНомерCOM" id="1">
+									<DataPath>РеквизитНомерCOM</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер COM порта</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер COM порта соединения ККТ. </v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="полеНомерCOMКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="полеНомерCOMРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">ПриИзмененииНастройекСвязиСКТТ</Event>
+									</Events>
+								</InputField>
+								<InputField name="полеIP" id="4">
+									<DataPath>РеквизитIP</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>IP адрес</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>IP адрес сервера ККТ или web-сервера ККТ или самой ККТ</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="полеIPКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="полеIPРасширеннаяПодсказка" id="6"/>
+									<Events>
+										<Event name="OnChange">ПриИзмененииНастройекСвязиСКТТ</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПолеПорт_IPККТ" id="16">
+									<DataPath>РеквизитПорт_IPККТ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер порта TCP</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПолеПорт_IPККТКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ПолеПорт_IPККТРасширеннаяПодсказка" id="18"/>
+									<Events>
+										<Event name="OnChange">ПриИзмененииНастройекСвязиСКТТ</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКнопки" id="21">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="22"/>
+							<ChildItems>
+								<Button name="КнопкаПрочитатьНастройкиИзДрайвера" id="127">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.КомандаПрочитатьНастройкиСвязиИзДрайвера</CommandName>
+									<ExtendedTooltip name="КнопкаПрочитатьНастройкиИзДрайвераРасширеннаяПодсказка" id="128"/>
+								</Button>
+								<Button name="КнопкаПрочитатьНастройки" id="12">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.ПрочитатьНастройкиККТ</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прочитать настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаПрочитатьНастройкиРасширеннаяПодсказка" id="13"/>
+								</Button>
+								<Button name="КнопкаСохранитьНастрокйки" id="10">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.СохранитьНастройкиККТ</CommandName>
+									<ExtendedTooltip name="КнопкаСохранитьНастрокйкиРасширеннаяПодсказка" id="11"/>
+								</Button>
+								<Button name="КнопкаТестСвязиСККТ" id="14">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ТестСвязиСКТТ</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тест связи с ККТ</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаТестСвязиСККТРасширеннаяПодсказка" id="15"/>
+								</Button>
+								<Button name="КнопкаОткрытьПапкуЛогФайлов" id="132">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаОткрытьПапкуЛогФайлов</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открыть папку лог файлов</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаОткрытьПапкуЛогФайловРасширеннаяПодсказка" id="133"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ПолеимяКассира" id="110">
+							<DataPath>РеквизитИмяКассира</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Имя кассира</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Имя кассира обязательно должно быть на чеке. Если не заполнено, то имя кассира будет браться из имени текущего пользователя</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="ПолеимяКассираКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ПолеимяКассираРасширеннаяПодсказка" id="112"/>
+						</InputField>
+						<CheckBoxField name="ПолеПоказыватьПечатнуюФормуЧекаПередПробитиемНаККТ" id="180">
+							<DataPath>РеквизитПоказыватьПечатнуюФормуЧекаПередПробитиемНаККТ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показывать предварительный просмотр чека перед пробитием на ККТ</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолеПоказыватьПечатнуюФормуЧекаПередПробитиемНаККТКонтекстноеМеню" id="181"/>
+							<ExtendedTooltip name="ПолеПоказыватьПечатнуюФормуЧекаПередПробитиемНаККТРасширеннаяПодсказка" id="182"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолеПоказыватьПечатнуюФормуЧекаПослеПечатиНаККТ" id="167">
+							<DataPath>РеквизитПоказыватьПечатнуюФормуЧекаПослеПечатиНаККТ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показывать печатную форму чека после печати на ККТ</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолеПоказыватьПечатнуюФормуЧекаПослеПечатиНаККТКонтекстноеМеню" id="168"/>
+							<ExtendedTooltip name="ПолеПоказыватьПечатнуюФормуЧекаПослеПечатиНаККТРасширеннаяПодсказка" id="169"/>
+						</CheckBoxField>
+						<LabelDecoration name="надписьРезультатТестаСвязиСККТ" id="75">
+							<ContextMenu name="надписьРезультатТестаСвязиСККТКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="надписьРезультатТестаСвязиСККТРасширеннаяПодсказка" id="77"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаВлкдадкаОтладка" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа влкдадка отладка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВлкдадкаОтладкаРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<InputField name="ПолеУровеньОтладки" id="25">
+							<DataPath>РеквизитУровеньОтладки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уровень логирования и отлакди</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ПолеУровеньОтладкиКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ПолеУровеньОтладкиРасширеннаяПодсказка" id="27"/>
+							<Events>
+								<Event name="StartChoice">ПолеУровеньОтладкиНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="надписьРезультатВыполненияКомманд" id="78">
+							<ContextMenu name="надписьРезультатВыполненияКоммандКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="надписьРезультатВыполненияКоммандРасширеннаяПодсказка" id="80"/>
+						</LabelDecoration>
+						<CheckBoxField name="ПоленеЗакрыватьСоедиениеВОднойТранзакцииПечатиЧека" id="164">
+							<DataPath>РеквизитнеЗакрыватьСоедиениеВОднойТранзакцииПечатиЧека</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не закрывать соединение в одной транзацкии печати чека</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПоленеЗакрыватьСоедиениеВОднойТранзакцииПечатиЧекаКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="ПоленеЗакрыватьСоедиениеВОднойТранзакцииПечатиЧекаРасширеннаяПодсказка" id="166"/>
+						</CheckBoxField>
+						<InputField name="ПолеМаксимальноеКолПопытокПроверкиМарки" id="161">
+							<DataPath>РеквизитМаксимальноеКолПопытокПроверкиМарки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Максимальное количество попыток запроса статуса проверки марки</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПолеМаксимальноеКолПопытокПроверкиМаркиКонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="ПолеМаксимальноеКолПопытокПроверкиМаркиРасширеннаяПодсказка" id="163"/>
+						</InputField>
+						<CheckBoxField name="ПолеФлТестовыйРежим" id="34">
+							<DataPath>РеквизитФлТестовыйРежим</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вклочить тестовый режим (эмуляции)</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолеФлТестовыйРежимКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ПолеФлТестовыйРежимРасширеннаяПодсказка" id="36"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолеПосылатьКомандуНаККТПослеФормированияJSON" id="103">
+							<DataPath>РеквизитПосылатьКомандуНаККТПослеФормированияJSON</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Формировать JSON и отправлять комманду на ККТ</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолеПосылатьКомандуНаККТПослеФормированияJSONКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="ПолеПосылатьКомандуНаККТПослеФормированияJSONРасширеннаяПодсказка" id="105"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолеИмитацияНеПолученияОтветаОтЧестногоЗнака" id="158">
+							<DataPath>РеквизитИммитацияНеПолученияОтветаОтЧестногоЗнака</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Эмуляция НЕ получения ответа от честного знака</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолеИмитацияНеПолученияОтветаОтЧестногоЗнакаКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ПолеИмитацияНеПолученияОтветаОтЧестногоЗнакаРасширеннаяПодсказка" id="160"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолеЭмулироватьЗадержкуОтветаОтИСМ" id="155">
+							<DataPath>РеквизитЭмулироватьЗадержкуОтветаОтИСМ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Имитация задержки ответа от честного знака</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолеЭмулироватьЗадержкуОтветаОтИСМКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="ПолеЭмулироватьЗадержкуОтветаОтИСМРасширеннаяПодсказка" id="157"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолеФлИспользоватьПрямыеКоммандыДрайверу" id="116">
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолеФлИспользоватьПрямыеКоммандыДрайверуКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="ПолеФлИспользоватьПрямыеКоммандыДрайверуРасширеннаяПодсказка" id="118"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаКнопкиПроверкиРаботыККТ" id="73">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки проверки работы ККТ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиПроверкиРаботыККТРасширеннаяПодсказка" id="74"/>
+							<ChildItems>
+								<Button name="КнопкаОтбитьЧекНаРубль" id="37">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтбитьЧекНаРубль</CommandName>
+									<ExtendedTooltip name="КнопкаОтбитьЧекНаРубльРасширеннаяПодсказка" id="38"/>
+								</Button>
+								<Button name="КнопкаВернутьЧекНаРубль" id="39">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВернутьЧекНаРубль</CommandName>
+									<ExtendedTooltip name="КнопкаВернутьЧекНаРубльРасширеннаяПодсказка" id="40"/>
+								</Button>
+								<Button name="КнопкаXОтчет" id="41">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаXОчтет</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>X отчет</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаXОтчетРасширеннаяПодсказка" id="42"/>
+								</Button>
+								<Button name="КнопкаПолучитьСтатусККТ" id="93">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаПолучитьСтатусККТ</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус ККТ</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаПолучитьСтатусККТРасширеннаяПодсказка" id="94"/>
+								</Button>
+								<Button name="КнопкаОтменитьЧек" id="91">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаОтменитьЧек</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отменить чек</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаОтменитьЧекРасширеннаяПодсказка" id="92"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПроверкаРаботыСМарками" id="67">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверка работы с марками</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверка работы с марками</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаПроверкаРаботыСМаркамиРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<InputField name="ПолеМарка1Пример" id="43">
+									<DataPath>МаркаПример1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пробная марка 1</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПолеМарка1ПримерКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ПолеМарка1ПримерРасширеннаяПодсказка" id="45"/>
+								</InputField>
+								<InputField name="ПолеМарка2Пример" id="62">
+									<DataPath>МаркаПример2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пробная марка 2</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПолеМарка2ПримерКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ПолеМарка2ПримерРасширеннаяПодсказка" id="64"/>
+								</InputField>
+								<InputField name="ПолеТеущаяМарка" id="113">
+									<DataPath>ТекущаяМарка</DataPath>
+									<ContextMenu name="ПолеТеущаяМаркаКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ПолеТеущаяМаркаРасширеннаяПодсказка" id="115"/>
+								</InputField>
+								<UsualGroup name="ГруппаКнопкиМарокПроверокИПреобразов" id="87">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки марок проверок и преобразов</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<ExtendedTooltip name="ГруппаКнопкиМарокПроверокИПреобразовРасширеннаяПодсказка" id="88"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаМаркиПреобразования" id="81">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа марки преобразования</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаМаркиПреобразованияРасширеннаяПодсказка" id="82"/>
+											<ChildItems>
+												<Button name="КнопкаПреобразоватьВBase64" id="85">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаПреобразоватьВBase64</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Преобразовать в base 64</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаПреобразоватьВBase64РасширеннаяПодсказка" id="86"/>
+												</Button>
+												<Button name="КнопкаДобавитьGSСисволы" id="83">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаДобавитьGSСимволы</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Добавить GS символы</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаДобавитьGSСисволыРасширеннаяПодсказка" id="84"/>
+												</Button>
+												<Button name="КнопкаЗалогироватьОперацию" id="134">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаЗалогироватьОпреацию</CommandName>
+													<ExtendedTooltip name="КнопкаЗалогироватьОперациюРасширеннаяПодсказка" id="135"/>
+												</Button>
+												<LabelDecoration name="ДекорацияОтделенияГрупппКнопок" id="124">
+													<ContextMenu name="ДекорацияОтделенияГрупппКнопокКонтекстноеМеню" id="125"/>
+													<ExtendedTooltip name="ДекорацияОтделенияГрупппКнопокРасширеннаяПодсказка" id="126"/>
+												</LabelDecoration>
+												<Button name="КнопкаОчиститьНастройкиККТ" id="119">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаОчиститьНастройкиККТ</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Очитстить настройки ККТ</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаОчиститьНастройкиККТРасширеннаяПодсказка" id="120"/>
+												</Button>
+												<InputField name="ПолеВидОплаты" id="129">
+													<DataPath>ВидОплаты</DataPath>
+													<ContextMenu name="ПолеВидОплатыКонтекстноеМеню" id="130"/>
+													<ExtendedTooltip name="ПолеВидОплатыРасширеннаяПодсказка" id="131"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаКнопкиМарок1" id="65">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки марок1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки марок1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКнопкиМарок1РасширеннаяПодсказка" id="66"/>
+											<ChildItems>
+												<Button name="КнопкаЗапуститьПроверкуМарки" id="46">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаЗапуститьПроверкуМарки</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заппустить проверку марки</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаЗапуститьПроверкуМаркиРасширеннаяПодсказка" id="47"/>
+												</Button>
+												<Button name="КнопкаПолучитьСтатусПроверкиМарки" id="48">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаПолучитьСтатусПроверкиМарки</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получить статус марки</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаПолучитьСтатусПроверкиМаркиРасширеннаяПодсказка" id="49"/>
+												</Button>
+												<Button name="КнопкаПриянтьМарку" id="50">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаПринятьМарку</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Принять марку</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаПриянтьМаркуРасширеннаяПодсказка" id="51"/>
+												</Button>
+												<Button name="КнопкаОтклонитьМарку" id="52">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаОтклонитьМарку</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отклонить марку</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаОтклонитьМаркуРасширеннаяПодсказка" id="53"/>
+												</Button>
+												<LabelDecoration name="ДекорацияСостояние" id="172">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация состояние</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияСостояниеКонтекстноеМеню" id="173"/>
+													<ExtendedTooltip name="ДекорацияСостояниеРасширеннаяПодсказка" id="174"/>
+												</LabelDecoration>
+												<Button name="КнопкаЗапуситьЗадание" id="170">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаЗапуститьЗдание</CommandName>
+													<ExtendedTooltip name="КнопкаЗапуситьЗаданиеРасширеннаяПодсказка" id="171"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаКнопкиМарок2" id="89">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки марок2</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКнопкиМарок2РасширеннаяПодсказка" id="90"/>
+											<ChildItems>
+												<Button name="КнопкаПрерватьПроверкуМарки" id="54">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаПрерватьПроверкуМарки</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Прервать провреку марки</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаПрерватьПроверкуМаркиРасширеннаяПодсказка" id="55"/>
+												</Button>
+												<Button name="КнопкаОчиститьТаблицуМарок" id="56">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаОчитситьТаблицуМарок</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Очистить таблицу марок</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаОчиститьТаблицуМарокРасширеннаяПодсказка" id="57"/>
+												</Button>
+												<Button name="КнопкаВернутьЧекСМаркой" id="60">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаОтбитьЧекСМаркой</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отбить чек с маркой</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаВернутьЧекСМаркойРасширеннаяПодсказка" id="61"/>
+												</Button>
+												<Button name="КнопкаОтбитьЧекСМаркой" id="58">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаВернутьЧекСМаркой</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вернуть чек с маркой</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаОтбитьЧекСМаркойРасширеннаяПодсказка" id="59"/>
+												</Button>
+												<Button name="КнопкаВывестиМакетЧека" id="139">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаВывестиМакетЧека</CommandName>
+													<ExtendedTooltip name="КнопкаВывестиМакетЧекаРасширеннаяПодсказка" id="140"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаJSONAnswer" id="153">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа JSONAnswer</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа JSONAnswer</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппаJSONAnswerРасширеннаяПодсказка" id="154"/>
+							<ChildItems>
+								<InputField name="ПолеИсходящийJSON" id="95">
+									<DataPath>исходящийJSON</DataPath>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ПолеИсходящийJSONКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ПолеИсходящийJSONРасширеннаяПодсказка" id="97"/>
+								</InputField>
+								<InputField name="ПолеЧекJSON" id="150">
+									<DataPath>РеквизитЧекJSON</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>JSON чека</v8:content>
+										</v8:item>
+									</Title>
+									<Width>50</Width>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ПолеЧекJSONКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ПолеЧекJSONРасширеннаяПодсказка" id="152"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<SpreadSheetDocumentField name="ПолеПечатнаяФормаЧека" id="177">
+							<DataPath>РеквизитПечатнаяФормаЧека</DataPath>
+							<ContextMenu name="ПолеПечатнаяФормаЧекаКонтекстноеМеню" id="178"/>
+							<ExtendedTooltip name="ПолеПечатнаяФормаЧекаРасширеннаяПодсказка" id="179"/>
+						</SpreadSheetDocumentField>
+						<HTMLDocumentField name="ПолеВыводЧека" id="136">
+							<DataPath>РеквизитВыводЧека</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Чек</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПолеВыводЧекаКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ПолеВыводЧекаРасширеннаяПодсказка" id="138"/>
+						</HTMLDocumentField>
+						<UsualGroup name="ГруппаКнопкиJSONКоманд" id="108">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки JSONКоманд</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиJSONКомандРасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<Button name="КнопкаПроверитьJSON" id="106">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаПроверитьJSON</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверить JSON</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаПроверитьJSONРасширеннаяПодсказка" id="107"/>
+								</Button>
+								<Button name="КнопкаОтправитьJSON" id="98">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаОтправитьJSON</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправить JSON</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаОтправитьJSONРасширеннаяПодсказка" id="99"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ПолеВходящийJSON" id="100">
+							<DataPath>входящийJSON</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ответ от кассы</v8:content>
+								</v8:item>
+							</Title>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ПолеВходящийJSONКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ПолеВходящийJSONРасширеннаяПодсказка" id="102"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПроверкаСвязиСWebСерверомАтол" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Если web атол</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа проверка связи с web сервером атол</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПроверкаСвязиСWebСерверомАтолРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<Button name="КнопкаRabbitMQ" id="187">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.КомандаRabbitMQ</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Послать команду без ожидания ответа</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаRabbitMQРасширеннаяПодсказка" id="188"/>
+						</Button>
+						<LabelDecoration name="ДекорацияРезультатОвтет" id="215">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация результат овтет</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияРезультатОвтетКонтекстноеМеню" id="216"/>
+							<ExtendedTooltip name="ДекорацияРезультатОвтетРасширеннаяПодсказка" id="217"/>
+						</LabelDecoration>
+						<Button name="КнопкаДобавитьОчередь" id="191">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаДобавитьОчередь</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Добавить очередь</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаДобавитьОчередьРасширеннаяПодсказка" id="192"/>
+						</Button>
+						<Button name="КнопкаПослатьJSONКомандуККТЧерезRabitMQ" id="189">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаПослатьJSONКомандуККТЧерезRabitMQ</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Послать команду без ожидания ответа</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаПослатьJSONКомандуККТЧерезRabitMQРасширеннаяПодсказка" id="190"/>
+						</Button>
+						<Button name="КнопкаПослатьМокJSONОтветаККТЧерезRabitMQ" id="197">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаПослатьМокJSONОтветаККТЧерезRabitMQ</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Послать мок ответ в RabbitMQ</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаПослатьМокJSONОтветаККТЧерезRabitMQРасширеннаяПодсказка" id="198"/>
+						</Button>
+						<Button name="КнопкаПрочитатьСообщенияИзRabbitMQ" id="193">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаПрочитатьСообщениеИзОчереди</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прочитать сообщения из RabbitMQ</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаПрочитатьСообщенияИзRabbitMQРасширеннаяПодсказка" id="194"/>
+						</Button>
+						<Button name="КнопкаПодождатьПолучениеОтветаОтККТ" id="218">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаПодождатьПолучениеОтветаОтККТ</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подождать до получения ответа от ККТ</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаПодождатьПолучениеОтветаОтККТРасширеннаяПодсказка" id="219"/>
+						</Button>
+						<Button name="КнопкаРазбитьМассивСообщенийОтRabbitMQНаМасстивJSON" id="207">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаРазбитьМассивСообщенийОтRabbitMQНаМасстивJSON</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разбить сообщения от RabbitMQ на массив JSON-ов</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаРазбитьМассивСообщенийОтRabbitMQНаМасстивJSONРасширеннаяПодсказка" id="208"/>
+						</Button>
+						<Button name="КнопкаОтркытьФормуОжиданияОтветаОтККТ" id="175">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.КомандаОткрытьФормуОжиданияОтветаОтККТ</CommandName>
+							<ExtendedTooltip name="КнопкаОтркытьФормуОжиданияОтветаОтККТРасширеннаяПодсказка" id="176"/>
+						</Button>
+						<UsualGroup name="ГруппаРазделитель" id="199">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа разделитель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа разделитель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРазделительРасширеннаяПодсказка" id="200"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияРазделитель" id="201">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>-------------------------</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияРазделительКонтекстноеМеню" id="202"/>
+									<ExtendedTooltip name="ДекорацияРазделительРасширеннаяПодсказка" id="203"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="КнопкаПослатьКомандуRabbitMQ" id="195">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаПослатьКомандуRabbitMQ</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Послать команду и дождаться ответа</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаПослатьКомандуRabbitMQРасширеннаяПодсказка" id="196"/>
+						</Button>
+						<InputField name="ПолеIDWebККТ" id="147">
+							<DataPath>РеквизитIDWebККТ</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ПолеIDWebККТКонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="ПолеIDWebККТРасширеннаяПодсказка" id="149"/>
+						</InputField>
+						<InputField name="ПолеПользовательWEB" id="141">
+							<DataPath>РеквизитПользовательWEB</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ПолеПользовательWEBКонтекстноеМеню" id="142"/>
+							<ExtendedTooltip name="ПолеПользовательWEBРасширеннаяПодсказка" id="143"/>
+						</InputField>
+						<InputField name="ПолеПWEB" id="144">
+							<DataPath>РеквизитПWEB</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ПолеПWEBКонтекстноеМеню" id="145"/>
+							<ExtendedTooltip name="ПолеПWEBРасширеннаяПодсказка" id="146"/>
+						</InputField>
+						<Button name="КнопкаТестСвязиССерверомАтол" id="71">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.КомандаТестСвязиССреверомАтол</CommandName>
+							<ExtendedTooltip name="КнопкаТестСвязиССерверомАтолРасширеннаяПодсказка" id="72"/>
+						</Button>
+						<Button name="КнопкаПроверкаАтвторизации" id="183">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.КомандаПроверкаАтвторизацииНаWebАтол</CommandName>
+							<ExtendedTooltip name="КнопкаПроверкаАтвторизацииРасширеннаяПодсказка" id="184"/>
+						</Button>
+						<TextDocumentField name="ПолеСообщенияОтRabbitMQ" id="204">
+							<DataPath>РеквизитСообщенияОтRabbitMQ</DataPath>
+							<ContextMenu name="ПолеСообщенияОтRabbitMQКонтекстноеМеню" id="205"/>
+							<ExtendedTooltip name="ПолеСообщенияОтRabbitMQРасширеннаяПодсказка" id="206"/>
+						</TextDocumentField>
+						<TextDocumentField name="ПолеJSONОтветRabbitMQ" id="209">
+							<DataPath>РеквизитJSONОтветRabbitMQ</DataPath>
+							<ContextMenu name="ПолеJSONОтветRabbitMQКонтекстноеМеню" id="210"/>
+							<ExtendedTooltip name="ПолеJSONОтветRabbitMQРасширеннаяПодсказка" id="211"/>
+						</TextDocumentField>
+						<TextDocumentField name="ПолеВсехJSONОтветов" id="212">
+							<DataPath>РеквизитВсехJSONОтветов</DataPath>
+							<ContextMenu name="ПолеВсехJSONОтветовКонтекстноеМеню" id="213"/>
+							<ExtendedTooltip name="ПолеВсехJSONОтветовРасширеннаяПодсказка" id="214"/>
+						</TextDocumentField>
+						<Button name="КнопкаТестСвязиСWebККТ" id="185">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.КомандаТестСвязиСWebККТ</CommandName>
+							<ExtendedTooltip name="КнопкаТестСвязиСWebККТРасширеннаяПодсказка" id="186"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.НастройкаСвязисККТ_2</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:4492ac78-69ca-491c-908c-814a652bd21c</Field>
+				<Field>1/0:ceb50b8c-034f-45d1-9cd3-949199b1895e</Field>
+				<Field>1/0:e49d6929-c105-49ac-8ae4-e9fb929b9bcc</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="исходящийJSON" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходящий JSON</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="входящийJSON" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входящий JSON</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаркаПример1" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Марка пример1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаркаПример2" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Марка пример2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитПосылатьКомандуНаККТПослеФормированияJSON" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит посылать команду на ККТПосле формирования JSON</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяМарка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая марка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидОплаты" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитВыводЧека" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит вывод чека</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитЧекJSON" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит чек JSON</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитТипСвязи" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит тип связи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитIP" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит IP</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитПорт_IPККТ" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит порт IPККТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитТаймаут_севрерККТ" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит таймаут севрер ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитНомерCOM" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит номер COM</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитУровеньОтладки" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит уровень отладки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитИмяКассира" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит имя кассира</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитФлТестовыйРежим" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит фл тестовый режим</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитЭмулироватьЗадержкуОтветаОтИСМ" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит эмулировать задержку ответа от ИСМ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитИммитацияНеПолученияОтветаОтЧестногоЗнака" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит иммитация не получения ответа от честного знака</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитМаксимальноеКолПопытокПроверкиМарки" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит максимальное кол попыток проверки марки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитнеЗакрыватьСоедиениеВОднойТранзакцииПечатиЧека" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизитне закрывать соедиение в одной транзакции печати чека</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитФлИспользоватьПрямыеКоммандыДрайверу" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит фл использовать прямые комманды драйверу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитПоказыватьПечатнуюФормуЧекаПослеПечатиНаККТ" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит показывать печатную форму чека после печати на ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитПечатнаяФормаЧека" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит печатная форма чека</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитПоказыватьПечатнуюФормуЧекаПередПробитиемНаККТ" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит показывать печатную форму чека перед пробитием на ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитПWEB" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит ПWEB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитПользовательWEB" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит пользователь WEB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитIDWebККТ" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит IDWeb ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитСообщенияОтRabbitMQ" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит сообщения от rabbit MQ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитJSONОтветRabbitMQ" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит JSONОтвет rabbit MQ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитВсехJSONОтветов" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит всех JSONОтветов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьНастройкиККТ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки ККТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройкиККТ</Action>
+		</Command>
+		<Command name="ПрочитатьНастройкиККТ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>киККЕТПрочитать настро</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать настройки ККТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьНастройкиККТ</Action>
+		</Command>
+		<Command name="ТестСвязиСКТТ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест связи СКТТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест связи СКТТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестСвязиСКТТ</Action>
+		</Command>
+		<Command name="ОтбитьЧекНаРубль" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбить чек на рубль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбить чек на рубль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтбитьЧекНаРубль</Action>
+		</Command>
+		<Command name="ВернутьЧекНаРубль" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть чек на рубль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть чек на рубль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВернутьЧекНаРубль</Action>
+		</Command>
+		<Command name="КомандаXОчтет" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда x очтет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда x очтет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаXОтчет</Action>
+		</Command>
+		<Command name="КомандаЗапуститьПроверкуМарки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запустить проверку марки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запустить проверку марки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапуститьПроверкуМарки</Action>
+		</Command>
+		<Command name="КомандаПолучитьСтатусПроверкиМарки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда получить статус проверки марки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда получить статус проверки марки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПолучитьСтатусПроверкиМарки</Action>
+		</Command>
+		<Command name="КомандаПринятьМарку" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда принять марку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда принять марку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПринятьМарку</Action>
+		</Command>
+		<Command name="КомандаОтклонитьМарку" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отклонить марку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отклонить марку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтклонитьМарку</Action>
+		</Command>
+		<Command name="КомандаПрерватьПроверкуМарки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда прервать проверку марки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда прервать проверку марки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПрерватьПроверкуМарки</Action>
+		</Command>
+		<Command name="КомандаОчитситьТаблицуМарок" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очитсить таблицу марок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очитсить таблицу марок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОчитситьТаблицуМарок</Action>
+		</Command>
+		<Command name="КомандаОтбитьЧекСМаркой" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отбить чек с маркой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отбить чек с маркой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтбитьЧекСМаркой</Action>
+		</Command>
+		<Command name="КомандаВернутьЧекСМаркой" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда вернуть чек с маркой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда вернуть чек с маркой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВернутьЧекСМаркой</Action>
+		</Command>
+		<Command name="КомандаТестСвязиССреверомАтол" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест связи с сревером атол</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда тест связи с сревером атол</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаТестСвязиССреверомАтол</Action>
+		</Command>
+		<Command name="КомандаДобавитьGSСимволы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда добавить GSСимволы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда добавить GSСимволы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДобавитьGSСимволы</Action>
+		</Command>
+		<Command name="КомандаПреобразоватьВBase64" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда преобразовать в base64</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда преобразовать в base64</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПреобразоватьВBase64</Action>
+		</Command>
+		<Command name="КомандаПолучитьСтатусККТ" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда получить статус ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда получить статус ККТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПолучитьСтатусККТ</Action>
+		</Command>
+		<Command name="КомандаОтменитьЧек" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отменить чек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отменить чек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтменитьЧек</Action>
+		</Command>
+		<Command name="КомандаОтправитьJSON" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отправить JSON</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отправить JSON</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтправитьJSON</Action>
+		</Command>
+		<Command name="КомандаПроверитьJSON" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда проверить JSON</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда проверить JSON</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПроверитьJSON</Action>
+		</Command>
+		<Command name="КомандаОчиститьНастройкиККТ" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очистить настройки ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очистить настройки ККТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьНастройкиККТ</Action>
+		</Command>
+		<Command name="КомандаПрочитатьНастройкиСвязиИзДрайвера" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда прочитать настройки связи из драйвера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда прочитать настройки связи из драйвера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПрочитатьНастройкиСвязиИзДрайвера</Action>
+		</Command>
+		<Command name="КомандаОткрытьПапкуЛогФайлов" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть папку лог файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть папку лог файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьПапкуЛогФайлов</Action>
+		</Command>
+		<Command name="КомандаЗалогироватьОпреацию" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Залогировать опреацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда залогировать опреацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗалогироватьОпреацию</Action>
+		</Command>
+		<Command name="КомандаВывестиМакетЧека" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести макет чека</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда вывести макет чека</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВывестиМакетЧека</Action>
+		</Command>
+		<Command name="КомандаЗапуститьЗдание" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запустить здание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запустить здание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапуститьЗдание</Action>
+		</Command>
+		<Command name="КомандаОткрытьФормуОжиданияОтветаОтККТ" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть форму ожидания ответа от ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть форму ожидания ответа от ККТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьФормуОжиданияОтветаОтККТ</Action>
+		</Command>
+		<Command name="КомандаПроверкаАтвторизацииНаWebАтол" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда проверка атвторизации на web атол</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда проверка атвторизации на web атол</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПроверкаАтвторизацииНаWebАтол</Action>
+		</Command>
+		<Command name="КомандаТестСвязиСWebККТ" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда тест связи с web ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда тест связи с web ККТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаТестСвязиСWebККТ</Action>
+		</Command>
+		<Command name="КомандаRabbitMQ" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда rabbit MQ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда rabbit MQ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаRabbitMQ</Action>
+		</Command>
+		<Command name="КомандаПослатьJSONКомандуККТЧерезRabitMQ" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда послать JSONКоманду ККТЧерез rabit MQ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда послать JSONКоманду ККТЧерез rabit MQ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПослатьJSONКомандуККТЧерезRabitMQ</Action>
+		</Command>
+		<Command name="КомандаДобавитьОчередь" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда добавить очередь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда добавить очередь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДобавитьОчередь</Action>
+		</Command>
+		<Command name="КомандаПрочитатьСообщениеИзОчереди" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда прочитать сообщение из очереди</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда прочитать сообщение из очереди</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПрочитатьСообщениеИзОчереди</Action>
+		</Command>
+		<Command name="КомандаПослатьКомандуRabbitMQ" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда послать команду rabbit MQ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда послать команду rabbit MQ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПослатьКомандуRabbitMQ</Action>
+		</Command>
+		<Command name="КомандаПослатьМокJSONОтветаККТЧерезRabitMQ" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда послать мок JSONОтвета ККТЧерез rabit MQ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда послать мок JSONОтвета ККТЧерез rabit MQ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПослатьМокJSONОтветаККТЧерезRabitMQ</Action>
+		</Command>
+		<Command name="КомандаРазбитьМассивСообщенийОтRabbitMQНаМасстивJSON" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда разбить массив сообщений от rabbit MQНа масстив JSON</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда разбить массив сообщений от rabbit MQНа масстив JSON</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаРазбитьМассивСообщенийОтRabbitMQНаМасстивJSON</Action>
+		</Command>
+		<Command name="КомандаПодождатьПолучениеОтветаОтККТ" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда подождать получение ответа от ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда подождать получение ответа от ККТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПодождатьПолучениеОтветаОтККТ</Action>
+		</Command>
+	</Commands>
+</Form>
