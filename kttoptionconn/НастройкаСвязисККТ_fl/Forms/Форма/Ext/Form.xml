@@ -357,6 +357,16 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаКнопкиПроверкиРаботыККТРасширеннаяПодсказка" id="74"/>
 							<ChildItems>
+								<InputField name="РеквизитСНО" id="223">
+									<DataPath>РеквизитСНО</DataPath>
+									<ContextMenu name="РеквизитСНОКонтекстноеМеню" id="224"/>
+									<ExtendedTooltip name="РеквизитСНОРасширеннаяПодсказка" id="225"/>
+								</InputField>
+								<InputField name="ПолеНомерОтдела" id="220">
+									<DataPath>РеквизитНомерОтдела</DataPath>
+									<ContextMenu name="ПолеНомерОтделаКонтекстноеМеню" id="221"/>
+									<ExtendedTooltip name="ПолеНомерОтделаРасширеннаяПодсказка" id="222"/>
+								</InputField>
 								<Button name="КнопкаОтбитьЧекНаРубль" id="37">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ОтбитьЧекНаРубль</CommandName>
@@ -1398,6 +1408,37 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Реквизит всех JSONОтветов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитНомерОтдела" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит номер отдела</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитСНО" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит СНО</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
