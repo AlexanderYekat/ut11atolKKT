@@ -80,6 +80,7 @@ func main() {
 	logsmap[LOGINFO_WITHSTD] = log.New(multwriterLocLoc, LOG_PREFIX+"_"+strings.ToUpper(LOGINFO)+" ", log.LstdFlags)
 	logsmap[LOGINFO].Println(runDescription)
 	logsmap[LOGINFO].Println(clearLogsDescr)
+	defer logsmap[LOGINFO].Println("программа версии " + Version_of_program + " закрытия кассовой смены по расписанию остановлена")
 
 	logsmap[LOGINFO_WITHSTD].Println("инициализация драйвера атол")
 	fptr, err := fptr10.NewSafe()
@@ -112,7 +113,8 @@ func main() {
 		comPort = ""
 	}
 	if !connectWithKassa(fptr, comPort) && !(*emulation) {
-		descrErr := fmt.Sprintf("ошибка сокдинения с кассовым аппаратом на ком порт %v", comPort)
+		descrErr := fmt.Sprintf("ошибка соединения с кассовым аппаратом на ком порт %v", comPort)
+		logsmap[LOGINFO].Println("соедиенние с кассой не установлено")
 		logsmap[LOGERROR].Println(descrErr)
 		if !*debugpr {
 			log.Panic(descrErr)
@@ -139,7 +141,7 @@ func main() {
 		log.Panic(errorDescr)
 	}
 	if !successCommand(resulOfCommand) {
-		logsmap[LOGINFO].Printf("закрытие смены на кассе не прогло. ошибка %v", resulOfCommand)
+		logsmap[LOGINFO].Printf("закрытие смены на кассе не прошло. ошибка %v", resulOfCommand)
 		log.Panic(resulOfCommand)
 	}
 	logsmap[LOGINFO].Print("закрытие смены прошлом успешно")
