@@ -6,21 +6,21 @@
 				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
 				<xr:ObjectId>5ce20ffe-8cc4-4539-9494-e1e1646f3bd7</xr:ObjectId>
 			</xr:ContainedObject>
-			<xr:GeneratedType name="ExternalDataProcessorObject.ВнешняяОбработкаУбратьНомерЧека" category="Object">
+			<xr:GeneratedType name="ExternalDataProcessorObject.ВнешняяОбработкаПечатьЧекаККТ" category="Object">
 				<xr:TypeId>c7920105-c0fb-442e-ad43-100fe2ff39fd</xr:TypeId>
 				<xr:ValueId>3d750e2d-25a7-4189-819d-ba91fad3198a</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ВнешняяОбработкаУбратьНомерЧека</Name>
+			<Name>ВнешняяОбработкаПечатьЧекаККТ</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Внешняя обработка убрать номер чека</v8:content>
+					<v8:content>Внешняя обработка печать чека ККТ</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<DefaultForm>ExternalDataProcessor.ВнешняяОбработкаУбратьНомерЧека.Form.Форма</DefaultForm>
+			<DefaultForm>ExternalDataProcessor.ВнешняяОбработкаПечатьЧекаККТ.Form.Форма</DefaultForm>
 			<AuxiliaryForm/>
 		</Properties>
 		<ChildObjects>
